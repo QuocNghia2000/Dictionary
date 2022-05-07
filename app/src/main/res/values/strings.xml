@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+    <string name="txt_vietname_english_dictionary">Vietnamese English Dictionary</string>
+    <string name="txt_translate_image">Translate Image</string>
+    <string name="txt_translate_camera">Translate camera</string>
+    <string name="txt_vip_package">VIP package</string>
+    <string name="txt_translate_text">Translate text</string>
+    <string name="txt_recent_word">Recent words</string>
+    <string name="txt_free_word_package">Free word packages</string>
+    <string name="txt_account">Account</string>
+    <string name="txt_your_word">Your words</string>
+</resources>
