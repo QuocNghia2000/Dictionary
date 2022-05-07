@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_main"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/main"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/header_padding_left"
+        android:paddingRight="@dimen/header_padding_left">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/header_icon_size"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Translate text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_page_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_header_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editInputTranslate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_home"
+                android:gravity="top"
+                android:hint="@string/hint_translate"
+                android:inputType="none|text|textCapSentences|textMultiLine"
+                android:maxLength="2000"
+                android:minHeight="100dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="9dp"
+                android:paddingEnd="40dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/bold_word"
+                android:textColorHint="@color/black_text_color_lighter"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btnClearText"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="top|right|center_vertical|center_horizontal|center|end"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:background="#00000000"
+                android:onClick="OnClick"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_close_file"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnMicro"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="top|right|center_vertical|center_horizontal|center|end"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_micro" />
+
+            <FrameLayout
+                android:id="@+id/frm_sound_source"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right|center_vertical|center_horizontal|center|end"
+                android:layout_marginTop="10dp">
+
+                <ProgressBar
+                    android:id="@+id/progressSoundSource"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btnSoundSource"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:paddingLeft="0dp"
+                    android:onClick="OnClick"
+                    android:paddingTop="6dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_sound" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingStart="3dp"
+            android:paddingLeft="3dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp">
+
+            <ImageButton
+                android:id="@+id/btnCam"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_round_grey"
+                android:padding="7dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_camera"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_des_small"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnGallery"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toEndOf="@+id/btnCam"
+                android:layout_toRightOf="@+id/btnCam"
+                android:background="@drawable/bg_round_grey"
+                android:padding="7dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_gallery"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_des_small"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnClearHistory"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toStartOf="@+id/btnDownloadModel"
+                android:layout_toLeftOf="@+id/btnDownloadModel"
+                android:background="@drawable/bg_round_grey"
+                android:contentDescription="Trash"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_delete" />
+
+            <ImageButton
+                android:id="@+id/btnDownloadModel"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:padding="7dp"
+                android:scaleType="fitCenter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_des_small"
+                android:visibility="gone"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom|center_vertical|center_horizontal|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnTranslateEV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/header_height"
+                android:layout_weight="1"
+                android:background="@color/main"
+                android:gravity="center"
+                android:text="@string/txt_translateEV"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_des_small" />
+
+            <TextView
+                android:id="@+id/btnTranslateVE"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/header_height"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/main"
+                android:gravity="center"
+                android:text="@string/txt_TranslateVE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_des_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frmResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtResultTranslate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_item_home"
+                    android:minHeight="100dp"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="9dp"
+                    android:paddingEnd="35dp"
+                    android:paddingRight="35dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/bold_word"
+                    android:textIsSelectable="true"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/btnCopy"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top|right|center_vertical|center_horizontal|center|end"
+                    android:layout_marginTop="2dp"
+                    android:background="#00000000"
+                    android:onClick="OnClick"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_copy" />
+
+                <FrameLayout
+                    android:id="@+id/frm_sound_target"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right|center_vertical|center_horizontal|center|end"
+                    android:layout_marginTop="10dp">
+
+                    <ProgressBar
+                        android:id="@+id/progressSoundTarget"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/btnSoundTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_sound" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_history_translate_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp" />
+
+
+</LinearLayout>

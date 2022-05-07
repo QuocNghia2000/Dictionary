@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -43,5 +44,7 @@ dependencies {
 
     //sdp
     implementation "com.intuit.sdp:sdp-android:1.0.6"
+
+    implementation 'com.google.mlkit:translate:17.0.0'
 
 }

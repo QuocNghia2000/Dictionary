@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Dictionary</string>
     <string name="txt_vietname_english_dictionary">Vietnamese English Dictionary</string>
-    <string name="txt_translate_image">Translate Image</string>
+    <string name="txt_translate_image">Translate image</string>
     <string name="txt_translate_camera">Translate camera</string>
     <string name="txt_vip_package">VIP package</string>
     <string name="txt_translate_text">Translate text</string>
@@ -9,4 +9,13 @@
     <string name="txt_free_word_package">Free word packages</string>
     <string name="txt_account">Account</string>
     <string name="txt_your_word">Your words</string>
+    <string name="txt_vietnamese">Vietnamese</string>
+    <string name="txt_setting">Settings</string>
+    <string name="txt_word_irregular">Irregular verbs</string>
+    <string name="txt_word_toeic">TOEIC Vocabulary</string>
+    <string name="txt_word_ielts">IELTS Vocabulary</string>
+    <string name="txt_word_toefl">TOEFL Vocabulary</string>
+    <string name="hint_translate">Input text to translate</string>
+    <string name="txt_translateEV">Eng - Viet</string>
+    <string name="txt_TranslateVE">Viet - Eng</string>
 </resources>

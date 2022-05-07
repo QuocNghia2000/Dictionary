@@ -8,12 +8,29 @@
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_item_home.xml" value="0.163" />
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_item_home_disable.xml" value="0.163" />
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_item_home_enable.xml" value="0.163" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_round_grey.xml" value="0.1705" />
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_search_word.xml" value="0.163" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/home_bg_icon_camera.xml" value="0.1705" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/home_bg_icon_image.xml" value="0.1705" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/home_bg_icon_important_word.xml" value="0.1685" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/home_bg_icon_recent.xml" value="0.1685" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/home_bg_icon_setting.xml" value="0.1685" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/home_bg_icon_transalte_text.xml" value="0.1685" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/home_bg_icon_vietanh.xml" value="0.1685" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/home_bg_icon_your_word.xml" value="0.1685" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_back.xml" value="0.1705" />
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_close_file.xml" value="0.163" />
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_micro.xml" value="0.163" />
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_search_file.xml" value="0.163" />
-        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/item_search_ve.xml" value="0.1705" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/activity_splash.xml" value="0.23385416666666667" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/activity_translate_text.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/activity_vedictionary.xml" value="0.19895833333333332" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/item_search_ve.xml" value="0.19895833333333332" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/layout.xml" value="0.159375" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/layout_item_search_ve.xml" value="0.23385416666666667" />
+        <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/layout/layout_item_translate_text.xml" value="0.23385416666666667" />
         <entry key="..\:/AndroidStudioProjects/Dictionary/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.163" />
       </map>
     </option>

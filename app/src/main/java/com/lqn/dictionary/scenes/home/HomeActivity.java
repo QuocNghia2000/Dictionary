@@ -1,7 +1,9 @@
 package com.lqn.dictionary.scenes.home;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,7 +12,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.mlkit.common.model.DownloadConditions;
+import com.google.mlkit.nl.translate.TranslateLanguage;
+import com.google.mlkit.nl.translate.Translation;
+import com.google.mlkit.nl.translate.Translator;
+import com.google.mlkit.nl.translate.TranslatorOptions;
 import com.lqn.dictionary.R;
+import com.lqn.dictionary.scenes.translate.text.TranslateTextActivity;
+import com.lqn.dictionary.scenes.v_e_dictionary.VEDictionaryActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -28,6 +39,7 @@ public class HomeActivity extends AppCompatActivity {
     private void initView() {
         btnMicro = findViewById(R.id.iv_micro);
         edtSearch = findViewById(R.id.edtSearch);
+
     }
 
     private void handleEvent() {
@@ -63,6 +75,14 @@ public class HomeActivity extends AppCompatActivity {
 
     public void onClickItemHome(View view)
     {
-        Log.d("TAKKK","dsd");
+        switch (view.getId())
+        {
+            case R.id.btnVEDictionary:
+                startActivity(new Intent(HomeActivity.this, VEDictionaryActivity.class));
+                break;
+            case R.id.btnTranslateText:
+                startActivity(new Intent(HomeActivity.this, TranslateTextActivity.class));
+                break;
+        }
     }
 }

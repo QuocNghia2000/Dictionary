@@ -14,4 +14,19 @@
     <color name="colorPrimary3">#b2ff59</color>
     <color name="gnt_white">#FFFFFF</color>
     <color name="gnt_outline">#E0E0E0</color>
+
+    <color name="main_recent">#0262be</color>
+    <color name="main">@color/colorPrimary1</color>
+    <color name="main_translate_text">#9c27b0</color>
+    <color name="main_your_word">#e91e63</color>
+    <color name="main_image">#bf5600</color>
+    <color name="main_camera">#777777</color>
+    <color name="main_important_word">#795548</color>
+    <color name="main_setting">#384a52</color>
+    <color name="text_color">#2f2f2f</color>
+    <color name="mean">#717171</color>
+    <color name="color_bg_main">#66bbbbbb</color>
+    <color name="bold_word">#212121</color>
+    <color name="black_text_color_lighter">#909090</color>
+
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lqn.dictionary" >
+    package="com.lqn.dictionary">
 
     <application
         android:allowBackup="true"
@@ -8,13 +8,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Dictionary..MainTheme" >
+        android:theme="@style/Theme.Dictionary.MainTheme">
+        <activity
+            android:name=".scenes.translate.text.TranslateTextActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Dictionary.Activity.TranslateText"/>
+        <activity
+            android:name=".scenes.v_e_dictionary.VEDictionaryActivity"
+            android:exported="false" />
         <activity
             android:name=".scenes.home.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".scenes.splash.SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
