@@ -28,5 +28,6 @@
     <color name="color_bg_main">#66bbbbbb</color>
     <color name="bold_word">#212121</color>
     <color name="black_text_color_lighter">#909090</color>
+    <color name="color_line">#a1919191</color>
 
 </resources>

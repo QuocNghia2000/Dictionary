@@ -2,6 +2,7 @@ package com.lqn.dictionary.scenes.translate.text;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,6 +28,7 @@ import com.google.mlkit.nl.translate.TranslatorOptions;
 import com.lqn.dictionary.R;
 import com.lqn.dictionary.adapter.translate.HistoryWordAdapter;
 import com.lqn.dictionary.callback.translate.OnItemListener;
+import com.lqn.dictionary.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -43,6 +45,7 @@ public class TranslateTextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translate_text);
+        Utils.changeStatusBarColor(this,R.color.main_translate_text);
         initView();
         handleEvent();
     }

@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/layout_item_header_page"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height" />
+
+    <ScrollView
+        android:id="@+id/page_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/page_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/bg_item_home_disable"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/checkRemindLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="0dp">
+
+                    <ImageView
+                        android:id="@+id/iconRemindLayout"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="7dp"
+                        android:background="@drawable/home_bg_icon_setting"
+                        android:contentDescription="Remind icon"
+                        android:padding="@dimen/home_icon_padding"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_alarm" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_remind_word"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/text_size_small" />
+
+                        <CheckBox
+                            android:id="@+id/checkRemind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/remindLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_line"
+                        android:background="@color/color_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/lnRemindFolder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                                android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/txt_remind_folder"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:id="@+id/tvRemindFolder"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="@string/txt_remind_folder_all"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_line"
+                            android:background="@color/color_line"
+                            android:textColor="@color/text_color" />
+
+                        <LinearLayout
+                            android:id="@+id/timeIndaySetting"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                                android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingTop="3dp">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/txt_time_in_day"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:id="@+id/textTimeInDay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_line"
+                            android:background="@color/color_line"
+                            android:textColor="@color/text_color" />
+
+                        <LinearLayout
+                            android:id="@+id/timeStartSetting"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                                android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingTop="3dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/txt_time_tart"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:id="@+id/textTimeStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00:00"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_line"
+                            android:background="@color/color_line"
+                            android:textColor="@color/text_color" />
+
+                        <LinearLayout
+                            android:id="@+id/timeEndSetting"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                                android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingTop="3dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/txt_time_end"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:id="@+id/texttimeEnd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00:00"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_line"
+                            android:background="@color/color_line"
+                            android:textColor="@color/text_color" />
+
+                        <LinearLayout
+                            android:id="@+id/dateRemindSetting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                                android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:gravity="center"
+                                android:text="@string/txt_date_remind_in_week"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/btnMo"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@color/color_line"
+                                    android:gravity="center"
+                                    android:text="2"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/item_size_smaller" />
+
+                                <TextView
+                                    android:id="@+id/btnTu"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="3dp"
+                                    android:background="@color/color_line"
+                                    android:gravity="center"
+                                    android:text="3"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/item_size_smaller" />
+
+                                <TextView
+                                    android:id="@+id/btnWe"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="3dp"
+                                    android:background="@color/color_line"
+                                    android:gravity="center"
+                                    android:text="4"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/item_size_smaller" />
+
+                                <TextView
+                                    android:id="@+id/btnTh"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="3dp"
+                                    android:background="@color/color_line"
+                                    android:gravity="center"
+                                    android:text="5"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/item_size_smaller" />
+
+                                <TextView
+                                    android:id="@+id/btnFr"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="3dp"
+                                    android:background="@color/color_line"
+                                    android:gravity="center"
+                                    android:text="6"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/item_size_smaller" />
+
+                                <TextView
+                                    android:id="@+id/btnSa"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="3dp"
+                                    android:background="@color/color_line"
+                                    android:gravity="center"
+                                    android:text="7"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/item_size_smaller" />
+
+                                <TextView
+                                    android:id="@+id/btnSu"
+                                    android:layout_width="30dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginStart="3dp"
+                                    android:background="@color/color_line"
+                                    android:gravity="center"
+                                    android:text="CN"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/item_size_smaller" />
+                            </LinearLayout>
+                            
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnHomeEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:background="@drawable/bg_item_home_disable"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingEnd="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/home_bg_icon_setting"
+                    android:contentDescription="Email icon"
+                    android:padding="@dimen/home_icon_padding"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_feedback" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/txt_send_comment"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_small" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/soundRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/bg_item_home_disable"
+                android:orientation="horizontal"
+                android:paddingStart="4dp">
+
+                <ImageView
+                    android:id="@+id/iconSoundMode"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/home_bg_icon_setting"
+                    android:clickable="false"
+                    android:filterTouchesWhenObscured="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="@dimen/home_icon_padding"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_volume"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/txtSoundSpeedLb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/iconSoundMode"
+                    android:text="@string/txt_sound_speed"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_small" />
+
+                <RadioGroup
+                    android:id="@+id/raSoundSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtSoundSpeedLb"
+                    android:layout_alignStart="@+id/txtSoundSpeedLb"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/cbSoundLower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/txt_sound_speed_slower"
+                        android:textColor="@color/text_color" />
+
+                    <RadioButton
+                        android:id="@+id/cbSoundLow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/txt_sound_speed_slow"
+                        android:textColor="@color/text_color" />
+
+                    <RadioButton
+                        android:id="@+id/cbSoundNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/txt_sound_speed_normal"
+                        android:textColor="@color/text_color" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtSoundDefalt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/raSoundSpeed"
+                    android:layout_alignStart="@+id/raSoundSpeed"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/txt_sound_default"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_small" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtSoundDefalt"
+                    android:layout_alignStart="@+id/txtSoundDefalt"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/cbSoundUK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/txt_sound_uk"
+                        android:textColor="@color/text_color" />
+
+                    <RadioButton
+                        android:id="@+id/cbSoundUS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="15dp"
+                        android:text="@string/txt_sound_us"
+                        android:textColor="@color/text_color" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:background="@drawable/bg_item_home_disable"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingEnd="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="7dp"
+                    android:background="@color/main_setting"
+                    android:contentDescription="Email icon"
+                    android:padding="@dimen/home_icon_padding"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_crown_vip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/txt_subscribe_vip_member"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_small" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnDarkTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:background="@drawable/bg_item_home_disable"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingEnd="5dp">
+
+                <ImageView
+                    android:id="@+id/iconDarktheme"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/home_bg_icon_setting"
+                    android:clickable="false"
+                    android:contentDescription="Auto translate icon"
+                    android:filterTouchesWhenObscured="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="@dimen/home_icon_padding"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_moon"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="@string/txt_dark_theme"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_small" />
+
+                <CheckBox
+                    android:id="@+id/checkTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/bg_item_home_disable"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/fiveStar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="0dp">
+
+                    <ImageView
+                        android:id="@+id/iconHomeRating"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="7dp"
+                        android:background="@drawable/home_bg_icon_setting"
+                        android:contentDescription="Rating icon"
+                        android:padding="@dimen/home_icon_padding"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_rating" />
+
+                    <TextView
+                        android:id="@+id/txtHomeRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/txt_rating"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_line"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:id="@+id/btnHomeShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="0dp">
+
+                    <ImageView
+                        android:id="@+id/iconHomeShare"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="7dp"
+                        android:background="@drawable/home_bg_icon_setting"
+                        android:contentDescription="Share icon"
+                        android:padding="@dimen/home_icon_padding"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_share" />
+
+                    <TextView
+                        android:id="@+id/txtHomeShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/txt_share"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_line"
+                    android:background="@color/color_line" />
+
+                <RelativeLayout
+                    android:id="@+id/btnInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="4dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconInfo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_margin="7dp"
+                        android:background="@drawable/home_bg_icon_setting"
+                        android:padding="@dimen/home_icon_padding"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_info" />
+
+                    <TextView
+                        android:id="@+id/txtInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@+id/iconInfo"
+                        android:text="@string/txt_infor"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:id="@+id/version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtInfo"
+                        android:layout_alignStart="@+id/txtInfo"
+                        android:text="1.0"
+                        android:textColor="@color/mean"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/version"
+                        android:layout_alignStart="@+id/txtInfo"
+                        android:text="@string/txt_developer"
+                        android:textColor="@color/mean"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

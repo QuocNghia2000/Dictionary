@@ -124,7 +124,6 @@
                 android:id="@+id/btnVEDictionary"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@drawable/bg_item_home"
                 android:clickable="true"
                 android:gravity="center_vertical"
@@ -292,6 +291,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/btnAccount"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_40sdp"
                     android:layout_marginLeft="@dimen/_7sdp"
@@ -320,6 +320,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btnRecentWord"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_8sdp"
@@ -351,8 +352,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/bg_item_home"
-                android:clickable="true"
+                android:background="@drawable/bg_item_home_disable"
                 android:gravity="center_vertical"
                 android:onClick="onClickItemHome"
                 android:orientation="vertical"
@@ -392,6 +392,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
                         android:orientation="vertical"
                         android:padding="5dp">
 
@@ -416,6 +418,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="onClickItemHome"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
                         android:orientation="vertical"
                         android:padding="5dp">
 
@@ -448,6 +453,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
                         android:orientation="vertical"
                         android:padding="5dp">
 
@@ -472,6 +479,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
                         android:orientation="vertical"
                         android:padding="5dp">
 
@@ -496,6 +505,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btnSetting"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_8sdp"

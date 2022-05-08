@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dictionary.MainTheme">
         <activity
+            android:name=".scenes.setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".scenes.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".scenes.recentword.RecentWordActivity"
+            android:exported="false" />
+        <activity
             android:name=".scenes.translate.text.TranslateTextActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Dictionary.Activity.TranslateText"/>
+            android:exported="false" />
         <activity
             android:name=".scenes.v_e_dictionary.VEDictionaryActivity"
             android:exported="false" />

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:layout_marginBottom="5dp"
-    android:background="@drawable/bg_item_home"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:background="@drawable/bg_item_home_disable"
     android:orientation="vertical">
 
     <RelativeLayout
